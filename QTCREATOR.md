@@ -16,15 +16,16 @@ For 32 bit Ubuntu you need to install g++ version 4.8 manually by such commands
 
 ###Prepare folder
 
-Choose a folder for the future build, for example **/home/user/TBuild** There you will have two folders, **Libraries** for third-party libs and **tdesktop** (or **tdesktop-master**) for the app.
+Choose a folder for the future build, for example `~/TBuild`. There you will have two folders, `Libraries` for third-party libs and `tdesktop` (or `tdesktop-master`) for the app.
 
 ###Clone source code
 
-By git – in Terminal go to **/home/user/TBuild** and run
+Using git in a terminal, run:
 
+    cd ~/TBuild
     git clone https://github.com/telegramdesktop/tdesktop.git
 
-or download in ZIP and extract to **/home/user/TBuild** rename **tdesktop-master** to **tdesktop** to have **/home/user/TBuild/tdesktop/Telegram/Telegram.pro** project
+or download in ZIP and extract to `~/TBuild/` rename `tdesktop-master` to `tdesktop` to have `~/TBuild/tdesktop/Telegram/Telegram.pro` project
 
 ###Prepare libraries
 
@@ -38,6 +39,8 @@ Install audio libraries
 
 [Download libogg-1.3.2 sources](http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.xz) from http://xiph.org/downloads, extract to **/home/user/TBuild/Libraries**, go to **/home/user/TBuild/Libraries/libogg-1.3.2** and run
 
+    wget -qO- http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.xz | tar xJ -C ~/TBuild/Libraries
+    cd ~/TBuild/Libraries/libogg-1.3.2
     ./configure
     make
     sudo make install
@@ -46,6 +49,8 @@ Install audio libraries
 
 [Download opus-1.1 sources](http://downloads.xiph.org/releases/opus/opus-1.1.tar.gz) from http://www.opus-codec.org/downloads, extract to **/home/user/TBuild/Libraries**, go to **/home/user/TBuild/Libraries/opus-1.1** and run
 
+    wget -qO- http://downloads.xiph.org/releases/opus/opus-1.1.tar.gz | tar xz -C ~/TBuild/Libraries/
+    cd ~/TBuild/Libraries/opus-1.1
     ./configure
     make
     sudo make install
@@ -54,6 +59,8 @@ Install audio libraries
 
 [Download opusfile-0.6 sources](http://downloads.xiph.org/releases/opus/opusfile-0.6.tar.gz) from http://www.opus-codec.org/downloads, extract to **/home/user/TBuild/Libraries**, go to **/home/user/TBuild/Libraries/opusfile-0.6** and run
 
+    wget -qO- http://downloads.xiph.org/releases/opus/opusfile-0.6.tar.gz | tar xz -C ~/TBuild/Libraries/
+    cd ~/TBuild/Libraries/opusfile-0.6
     ./configure
     make
     sudo make install
